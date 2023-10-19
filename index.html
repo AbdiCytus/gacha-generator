@@ -5,48 +5,80 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <img
-      src="https://rerollcdn.com/STARRAIL/Characters/Full/3003.png"
-      class="banner" />
-    <h2>Foreseen, Foreknown, Foretold</h2>
-    <h3>Event Contract Karakter Eksklusif</h3>
-    <div class="overflow">
-      <div class="main">
-        <main class="info">
-          <h5 id="pity">Pity : 0</h5>
-          <h5 class="rateoff">Rate off</h5>
+    <!--      Bagian Header      -->
+    <header>
+      <img class="banner" />
+      <h2 class="title"></h2>
+      <h3>Event Contract Karakter Eksklusif</h3>
+    </header>
+    <!--      Bagian Header      -->
+
+    <!--      Bagian Utama      -->
+
+    <!-- Box Utama -->
+    <div class="container">
+      <div class="overflow">
+        <main class="main">
+          <!-- Informasi Ketergantungan -->
+          <div class="info">
+            <h5 id="pity">Pity : 0</h5>
+            <h5 class="rateoff">Rate off</h5>
+          </div>
+          <!-- Informasi Ketergantungan -->
+
+          <!-- Kemunculan Karakter -->
+          <span>Karakter Tersedia:</span>
+          <div class="display">
+            <ul class="main-list">
+              <li class="S event">(S) Fu Xuan [UP!]</li>
+              <li class="A event-2">(A) Hook</li>
+            </ul>
+            <img class="chara" />
+          </div>
+          <!-- Kemunculan Karakter -->
+
+          <!-- Tombol Contract -->
+          <button>Contract</button>
+          <p></p>
+          <!-- Tombol Contract -->
         </main>
-        <span>Karakter Tersedia:</span>
-        <div class="list">
-          <ul class="display">
-            <li class="S">(S) Fu Xuan [UP!]</li>
-            <li class="A">(A) Hook</li>
-          </ul>
-          <img class="chara" />
-        </div>
-        <button>Contract</button>
-        <p></p>
-        <details>
-          <summary>Persentase perolehan</summary>
-          <p style="margin-left: 10px">
-            Event gacha limited karakter, setiap melakukan<span
-              style="color: lime">
-              contract </span
-            >akan menambah poin pity. Setiap
-            <span style="color: lime">90</span> poin pity akan mendapatkan
-            jaminan rank <span style="color: yellow">S karakter.</span> Berikut
-            persentase dasar kemungkinan perolehan dari suatu karakter:
-          </p>
-          <ul>
-            <li class="S">Fu Xuan : 2% [UP!]</li>
-            <li class="S">Clara : 2%</li>
-            <li class="A">Hook : 98%</li>
-            <li class="disable">Seele (Telah Berakhir)</li>
-            <li class="disable">Bailu (Disabled)</li>
-          </ul>
-        </details>
+      </div>
+      <div class="path-container">
+        <img height="40" class="element">
+        <span class="path">test</span>
       </div>
     </div>
+    <!-- Box Utama -->
+
+    <!-- Box Detail -->
+    <details>
+      <!-- Penjelasan Sistem Perolehan -->
+      <summary>Persentase perolehan</summary>
+      <p style="margin-left: 10px">
+        Event gacha limited karakter, setiap melakukan<span style="color: lime">
+          contract </span
+        >akan menambah poin pity. Setiap
+        <span style="color: lime">90</span> poin pity akan mendapatkan jaminan
+        rank <span style="color: yellow">S karakter.</span> Berikut persentase
+        dasar kemungkinan perolehan dari suatu karakter:
+      </p>
+      <!-- Penjelasan Sistem Perolehan -->
+
+      <!-- List Karakter Tersedia -->
+      <ul class="detail-list">
+        <li class="S event"></li>
+        <li class="S">Clara : 2%</li>
+        <li class="A event-2"></li>
+        <li class="disable ended"></li>
+        <li class="disable">Bailu (Disabled)</li>
+      </ul>
+      <!-- List Karakter Tersedia -->
+    </details>
+    <!-- Box Detail -->
+
+    <!--      Bagian Utama      -->
+
+    <!-- Script -->
     <script src="script.js"></script>
   </body>
 </html>
