@@ -10,6 +10,7 @@ body {
   padding-top: 0;
   color: white;
   transition: all 1s ease;
+  overflow-x: hidden;
 }
 
 /* Header */
@@ -52,8 +53,8 @@ h3 {
 
 .main {
   margin: 0 8px;
-  border-radius: 6px;
   padding: 0 10px;
+  border-radius: 6px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   background-color: rgba(255, 255, 255, 0.1);
 }
@@ -91,6 +92,7 @@ h3 {
   margin: 0;
   display: flex;
   height: 120px;
+  transition: all 800ms ease;
 }
 
 .main-list {
@@ -100,7 +102,7 @@ h3 {
   position: absolute;
   border-radius: 5px;
   margin: 10px 0 15px 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
 }
 
 li {
@@ -132,7 +134,8 @@ li {
 }
 
 /* Tombol Contract */
-button, #fake-btn {
+button,
+#fake-btn {
   border: none;
   padding: 9px;
   color: white;
@@ -154,7 +157,7 @@ button:hover {
   font-size: 83%;
   position: absolute;
   transform: translateY(-46px);
-  background-color: rgb(40, 40,40);
+  background-color: rgb(40, 40, 40);
 }
 
 .invisible {
@@ -257,29 +260,32 @@ summary {
 }
 
 .path {
-  right: 400px;
+  left: 290px;
   bottom: 28px;
   padding: 5px;
   font-size: 10px;
   position: absolute;
   border-radius: 2.5px;
+  filter: opacity(0%);
   background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Posisi Element Karakter */
 .element {
-  right: 400px;
-  bottom: 57px;
+  height: 40px;
+  right: 90px;
+  bottom: 40px;
   position: absolute;
   filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+  filter: opacity(0%);
 }
 
 /* Style Output Nama Karakter Exclusive */
 .stylush-2 {
   width: max-content;
-  padding-left: 24px;
+  padding-left: 22px;
   text-align: end;
-  background-color: gold;
+  background-color: rgba(255, 255, 0, 0.8);
   border: 0.5px solid white;
   box-shadow: 0 0 5px 1px yellow;
 }
@@ -289,19 +295,13 @@ summary {
   transform: translateX(-240px);
 }
 
-/* Transisi Path Karakter */
-.path-translate {
-  transition: all 300ms ease;
-  transform: translateX(380px);
+/* Transisi Path & Element Karakter */
+.path-translate, .element-translate {
+  transition: all 500ms ease;
+  filter: opacity(100%);
 }
 
-/* Transisi Element Karakter */
-.element-translate {
-  transition: all 300ms ease;
-  transform: translateX(328px);
-}
-
-/* Transisi Krakter */
+/* Transisi Karakter */
 .charaTranslate {
   transform: translateX(-230px);
 }

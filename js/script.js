@@ -1,3 +1,6 @@
+import { element, path } from "./data.js";
+import { bannerChara, iconChara, karakter } from "./chara/images.js";
+
 console.log("Riwayat Gacha");
 
 //Area Penyeleksian Elemen
@@ -5,8 +8,11 @@ const body = document.querySelector("body");
 const banner = document.querySelector(".banner");
 const title = document.querySelector(".title");
 const subTitle = document.querySelector("h3");
+const mainBox = document.querySelector(".main")
 const pityText = document.querySelector("#pity");
 const rate = document.querySelector(".rateoff");
+const charaExist = document.querySelector("span");
+const display = document.querySelector(".display")
 const charaDisplayS = document.querySelectorAll(".event");
 const charaDisplayA = document.querySelectorAll(".event-2");
 const charaEnded = document.querySelector(".ended");
@@ -15,7 +21,8 @@ const chara = document.querySelector(".chara");
 const output = document.querySelector("#output");
 const outputPath = document.querySelector(".path");
 const outputElement = document.querySelector(".element");
-const bannerList = document.querySelectorAll(".select-banner");
+const selectBanner = document.querySelector(".list-banner");
+const details = document.querySelector("details");
 //Area Peneyeleksian Elemen
 
 //Variabel Ketergantungan
@@ -24,85 +31,6 @@ let rateOff = true;
 //Variabel Ketergantungan
 
 //                       Data Karakter                     //
-const element = {
-  quantum: {
-    icon: "assets/elements/element - quantum.webp",
-    color: "rgb(40, 0, 80)",
-    solid: "indigo",
-  },
-  imaginary: {
-    icon: "assets/elements/element - imaginary.webp",
-    color: "rgb(50, 50, 20)",
-    solid: "goldenRod",
-  },
-  physical: {
-    icon: "assets/elements/element - physical.webp",
-    color: "rgb(40, 40, 40)",
-    solid: "gray",
-  },
-  fire: {
-    icon: "assets/elements/element - fire.webp",
-    color: "rgb(50, 10, 10)",
-    solid: "darkRed",
-  },
-  wind: {
-    icon: "assets/elements/element - wind.webp",
-    color: "rgb(5, 35, 10)",
-    solid: "darkGreen",
-  },
-  ice: {
-    icon: "assets/elements/element - ice.webp",
-    color: "rgb(0, 20, 60)",
-    solid: "darkBlue",
-  },
-  lightning: {
-    icon: "assets/elements/element - lightning.webp",
-    color: "rgb(40, 0, 30)",
-    solid: "purple",
-  },
-};
-
-const path = [
-  "Hunt",
-  "Erudition",
-  "Preservation",
-  "Destruction",
-  "Nihility",
-  "Harmony",
-  "Abundance",
-];
-
-const bannerChara = {
-  seele: "assets/banner/Seele.webp",
-  fuXuan: "assets/banner/Fu Xuan.webp",
-  jingliu: "assets/banner/Jingliu.webp",
-  silverWolf: "assets/banner/Silver Wolf.webp",
-  kafka: "assets/banner/Kafka.webp",
-  blade: "assets/banner/Blade.webp",
-};
-
-const iconChara = {
-  seele: "assets/icon/characters/Seele.webp",
-  silverWolf: "assets/icon/characters/Silver Wolf.webp",
-  blade: "assets/icon/characters/Blade.webp",
-  kafka: "assets/icon/characters/Kafka.webp",
-  fuXuan: "assets/icon/characters/Fu Xuan.webp",
-  jingliu: "assets/icon/characters/Jingliu.webp",
-  topaz: "assets/icon/characters/Topaz.webp",
-  huohuo: "assets/icon/characters/Huohuo.webp",
-};
-
-const karakter = {
-  seele: "assets/characters/Seele Splash Art.webp",
-  silverWolf: "assets/characters/Silver Wolf Splash Art.webp",
-  blade: "assets/characters/Blade Splash Art.webp",
-  kafka: "assets/characters/Kafka Splash Art.webp",
-  fuXuan: "assets/characters/Fu Xuan Splash Art.webp",
-  jingliu: "assets/characters/Jingliu Splash Art.webp",
-  clara: "assets/characters/Clara Splash Art.webp",
-  bailu: "assets/characters/Bailu Splash Art.webp",
-  hook: "assets/characters/Hook Splash Art.webp",
-};
 
 // Data Detail Karakter
 const seele = {
@@ -224,6 +152,13 @@ const eventKarakter = {
 };
 
 //Seleksi Dinamis
+for (let i = 0; i < getChara.length; i++) {
+  const create = document.createElement("img");
+  selectBanner.appendChild(create);
+  create.setAttribute("class", "select-banner");
+}
+const bannerList = document.querySelectorAll(".select-banner");
+
 for (let i = 0; i < bannerList.length; i++) {
   const element = bannerList[i];
   element.setAttribute("src", icon[i]);
@@ -240,9 +175,17 @@ function update() {
   }
 
   if (eventKarakter.b5[0].title == "Coming Soon") {
-    btn.classList.add("invisible")
+    mainBox.style.height = "90px"
+    btn.classList.add("invisible");
+    display.classList.add("invisible")
+    details.style.visibility = "hidden"
+    charaExist.innerHTML = "Tidak ada karakter yang tersedia."
   } else {
-    btn.classList.remove("invisible")
+    mainBox.style.height = "auto"
+    btn.classList.remove("invisible");
+    display.classList.remove("invisible")
+    details.style.visibility = "visible"
+    charaExist.innerHTML = "Karakter tersedia:"
   }
 
   body.style.backgroundColor = eventKarakter.b5[0].element.color;
@@ -298,7 +241,7 @@ for (let i = 0; i < bannerList.length; i++) {
 //                       Setup Sistem Function                     //
 
 //Sistem Penghapusan Class
-classRemove = () => {
+const classRemove = () => {
   chara.removeAttribute("src");
   output.classList.remove("stylush");
   output.classList.remove("stylush-2");
@@ -309,7 +252,7 @@ classRemove = () => {
 }; //Sistem Penghapusan Class
 
 //Sistem Penambahan Class
-classAddSetup = () => {
+const classAddSetup = () => {
   output.classList.add("stylush");
   btn.classList.remove("animation");
   output.classList.add("translate");

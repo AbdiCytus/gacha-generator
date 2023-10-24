@@ -2,15 +2,21 @@
 <html>
   <head>
     <title>Gacha Generator</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="assets/icon/characters/Seele.webp" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/desktop.css" />
   </head>
   <body>
     <!--      Bagian Header      -->
     <header>
       <img class="banner banner-translate" />
-      <h2 class="title"></h2>
-      <h3>Event Contract Karakter Eksklusif</h3>
+      <div class="title-container">
+        <h2 class="title"></h2>
+        <h3>Event Contract Karakter Eksklusif</h3>
+      </div>
     </header>
     <!--      Bagian Header      -->
 
@@ -28,7 +34,7 @@
           <!-- Informasi Ketergantungan -->
 
           <!-- Kemunculan Karakter -->
-          <span>Karakter Tersedia:</span>
+          <span>Karakter tersedia:</span>
           <div class="display">
             <ul class="main-list">
               <li class="S event"></li>
@@ -40,60 +46,55 @@
 
           <!-- Tombol Contract -->
           <button>Contract</button>
-          <p id="fake-btn">Contract</p>
+          <!-- <p id="fake-btn">Contract</p> -->
           <p id="output"></p>
           <!-- Tombol Contract -->
+          <div class="path-container">
+            <img class="element" />
+            <span class="path"></span>
+          </div>
         </main>
       </div>
-      <div class="path-container">
-        <img height="40" class="element" />
-        <span class="path"></span>
-      </div>
-    </div>
-    <!-- Box Utama -->
 
-    <!-- Box Banner Karakter -->
-    <div class="list-banner">
-      <img class="select-banner" />
-      <img class="select-banner" />
-      <img class="select-banner" />
-      <img class="select-banner" />
-      <img class="select-banner" />
-      <img class="select-banner" />
-      <img class="select-banner" />
-      <img class="select-banner" />
+      <!-- Box Utama -->
+
+      <!-- Box Banner Karakter -->
+      <div class="list-banner"></div>
     </div>
     <!-- Box Banner Karakter -->
 
     <!-- Box Detail -->
-    <details>
-      <!-- Penjelasan Sistem Perolehan -->
-      <summary>Persentase perolehan</summary>
-      <p style="margin-left: 10px">
-        Event gacha limited karakter, setiap melakukan<span style="color: lime">
-          contract </span
-        >akan menambah poin pity. Setiap
-        <span style="color: lime">90</span> poin pity akan mendapatkan jaminan
-        rank <span style="color: yellow">S karakter.</span> Berikut persentase
-        dasar kemungkinan perolehan dari suatu karakter:
-      </p>
-      <!-- Penjelasan Sistem Perolehan -->
+    <div class="detail">
+      <details>
+        <!-- Penjelasan Sistem Perolehan -->
+        <summary>Persentase perolehan</summary>
+        <p style="margin-left: 10px">
+          Event gacha limited karakter, setiap melakukan<span
+            style="color: lime">
+            contract </span
+          >akan menambah poin pity. Setiap
+          <span style="color: lime">90</span> poin pity akan mendapatkan jaminan
+          rank <span style="color: yellow">S karakter.</span> Berikut persentase
+          dasar kemungkinan perolehan dari suatu karakter:
+        </p>
+        <!-- Penjelasan Sistem Perolehan -->
 
-      <!-- List Karakter Tersedia -->
-      <ul class="detail-list">
-        <li class="S event"></li>
-        <li class="S">Clara : 2%</li>
-        <li class="A event-2"></li>
-        <li class="disable">Bailu (Disabled)</li>
-      </ul>
-      <!-- List Karakter Tersedia -->
-    </details>
+        <!-- List Karakter Tersedia -->
+        <ul class="detail-list">
+          <li class="S event"></li>
+          <li class="S">Clara : 2%</li>
+          <li class="A event-2"></li>
+          <li class="disable">Bailu (Disabled)</li>
+        </ul>
+        <!-- List Karakter Tersedia -->
+      </details>
+    </div>
     <!-- Box Detail -->
 
     <!--      Bagian Utama      -->
 
     <!-- Script -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js"></script>
-    <script src="script.js"></script>
+    <script type="module" src="js/script.js"></script>
   </body>
 </html>
