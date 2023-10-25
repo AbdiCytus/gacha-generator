@@ -8,11 +8,11 @@ const body = document.querySelector("body");
 const banner = document.querySelector(".banner");
 const title = document.querySelector(".title");
 const subTitle = document.querySelector("h3");
-const mainBox = document.querySelector(".main")
+const mainBox = document.querySelector(".main");
 const pityText = document.querySelector("#pity");
 const rate = document.querySelector(".rateoff");
 const charaExist = document.querySelector("span");
-const display = document.querySelector(".display")
+const display = document.querySelector(".display");
 const charaDisplayS = document.querySelectorAll(".event");
 const charaDisplayA = document.querySelectorAll(".event-2");
 const charaEnded = document.querySelector(".ended");
@@ -175,17 +175,17 @@ function update() {
   }
 
   if (eventKarakter.b5[0].title == "Coming Soon") {
-    mainBox.style.height = "90px"
+    mainBox.style.height = "90px";
     btn.classList.add("invisible");
-    display.classList.add("invisible")
-    details.style.visibility = "hidden"
-    charaExist.innerHTML = "Tidak ada karakter yang tersedia."
+    display.classList.add("invisible");
+    details.style.visibility = "hidden";
+    charaExist.innerHTML = "Tidak ada karakter yang tersedia.";
   } else {
-    mainBox.style.height = "auto"
+    mainBox.style.height = "auto";
     btn.classList.remove("invisible");
-    display.classList.remove("invisible")
-    details.style.visibility = "visible"
-    charaExist.innerHTML = "Karakter tersedia:"
+    display.classList.remove("invisible");
+    details.style.visibility = "visible";
+    charaExist.innerHTML = "Karakter tersedia:";
   }
 
   body.style.backgroundColor = eventKarakter.b5[0].element.color;
@@ -311,7 +311,7 @@ btn.addEventListener("click", () => {
   let getChara = Math.floor(select);
   let modulus = getChara % 2;
   let rare = 2;
-  let common = 100 - rare - pity * 0.25;
+  let common = 100 - rare - pity * 0.2;
 
   //Sistem Kondisi Cotract & Pendapatan Karakter Dimulai
 
