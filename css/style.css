@@ -34,10 +34,10 @@ h2 {
 }
 
 h3 {
-  width: 55%;
   padding: 8px;
   font-size: 80%;
   border-radius: 4px;
+  width: max-content;
   filter: opacity(50%);
   margin: 0 20px 0 10px;
   transition: all 1s ease;
@@ -106,7 +106,7 @@ h3 {
 }
 
 li {
-  margin: 10px 15px;
+  margin: 10px 20px;
   font-weight: bold;
 }
 
@@ -273,7 +273,7 @@ summary {
 /* Posisi Element Karakter */
 .element {
   height: 40px;
-  right: 90px;
+  right: 115px;
   bottom: 40px;
   position: absolute;
   filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
@@ -321,3 +321,188 @@ summary {
   }
 }
 /*           Area Trigger Classlist Javascript           */
+
+/*                Responsive Breakpoints                */
+
+/* Tablet */
+@media only screen and (min-width: 512px) and (max-width: 999px) {
+  .banner {
+      width: 300px;
+    }
+  
+    .title-container {
+      display: flex;
+      text-align: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  
+    .title {
+      font-size: 30px;
+    }
+  
+    h3 {
+      font-size: 15px;
+      width: max-content;
+    }
+  
+    .container {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  
+    .overflow {
+      display: flex;
+      justify-content: center;
+    }
+  
+    .main {
+      width: 80%;
+      height: max-content;
+      margin: 0 50px;
+    }
+  
+    .info {
+      width: 26%;
+    }
+
+    .main-list .event, .main-list .event-2 {
+      font-size: 23px;
+    }
+  
+    .display {
+      display: flex;
+    }
+  
+    .main-list {
+      width: 45%;
+      padding-left: 20px;
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    }
+
+    button {
+      margin-top: 6px;
+      font-size: 110%;
+    }
+  
+    /* Transisi Nama Karakter */
+    .translate {
+      transform: translateX(-210px);
+    }
+  
+    .path {
+      left: 320px;
+    }
+  
+    .element {
+      right: 85px;
+    }
+  
+    /* Transisi Krakter */
+    .charaTranslate {
+      transform: translateX(-200px);
+    }
+  
+    .list-banner {
+      width: max-content;
+      margin: 15px 10px 0 10px;
+      align-self: center;
+      justify-content: center;
+    }
+  
+    .detail {
+      display: flex;
+      justify-content: center;
+    }
+  
+    details {
+      width: 80%;
+      font-size: 110%;
+      margin-bottom: 50px;
+    }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1000px) {
+  .banner {
+    width: 400px;
+  }
+
+  .title-container {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .overflow {
+    display: flex;
+    justify-content: center;
+  }
+
+  .main {
+    width: 50%;
+    margin: 0 50px;
+  }
+
+  .info {
+    width: 150px;
+  }
+
+  .display {
+    display: flex;
+  }
+
+  .main-list {
+    width: 35%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  }
+
+  /* Transisi Nama Karakter */
+  .translate {
+    transform: translateX(-60px);
+  }
+
+  .path {
+    left: 470px;
+  }
+
+  .element {
+    right: -65px;
+  }
+
+  /* Transisi Krakter */
+  .charaTranslate {
+    transform: translateX(-50px);
+  }
+
+  .list-banner {
+    width: max-content;
+    margin: 15px 10px 0 10px;
+    align-self: center;
+    justify-content: center;
+  }
+
+  .detail {
+    display: flex;
+    justify-content: center;
+  }
+
+  details {
+    width: 50%;
+    margin-bottom: 50px;
+  }
+}
