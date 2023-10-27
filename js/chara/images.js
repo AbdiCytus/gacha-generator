@@ -1,10 +1,11 @@
 export const bannerChara = {
   seele: "assets/banner/Seele.webp",
+  silverWolf: "assets/banner/Silver Wolf.webp",
+  blade: "assets/banner/Blade.webp",
+  kafka: "assets/banner/Kafka.webp",
   fuXuan: "assets/banner/Fu Xuan.webp",
   jingliu: "assets/banner/Jingliu.webp",
-  silverWolf: "assets/banner/Silver Wolf.webp",
-  kafka: "assets/banner/Kafka.webp",
-  blade: "assets/banner/Blade.webp",
+  topaz: "assets/banner/Topaz.webp",
 };
 
 export const iconChara = {
@@ -25,7 +26,9 @@ export const karakter = {
   kafka: "assets/characters/Kafka Splash Art.webp",
   fuXuan: "assets/characters/Fu Xuan Splash Art.webp",
   jingliu: "assets/characters/Jingliu Splash Art.webp",
+  topaz: "assets/characters/Topaz and Numby Splash Art.webp",
   clara: "assets/characters/Clara Splash Art.webp",
   bailu: "assets/characters/Bailu Splash Art.webp",
   hook: "assets/characters/Hook Splash Art.webp",
+  guinaifen: "assets/characters/Guinaifen Splash Art.webp",
 };

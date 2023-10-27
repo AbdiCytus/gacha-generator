@@ -95,7 +95,7 @@ const jingliu = {
 
 const topaz = {
   name: "Topaz",
-  title: "Coming Soon",
+  title: "Sunset Clause",
   banner: bannerChara.topaz,
   icon: iconChara.topaz,
   path: path[0],
@@ -144,10 +144,10 @@ const icon = [
 const eventKarakter = {
   b5: [seele],
   b4: {
-    name: "Hook",
-    path: path[3],
+    name: "Guinaifen",
+    path: path[4],
     element: element.fire,
-    character: karakter.hook,
+    character: karakter.guinaifen,
   },
 };
 
@@ -287,7 +287,7 @@ const guarantee = {
 
 //Sistem Item Random
 const commonChara = {
-  hook: () => {
+  guinaifen: () => {
     console.log(eventKarakter.b4.name + " x1");
     output.innerHTML = eventKarakter.b4.name;
     outputPath.innerHTML = eventKarakter.b4.path;
@@ -331,7 +331,7 @@ btn.addEventListener("click", () => {
       //Pity Random Start
     } else if (getChara < common) {
       pity += 10;
-      commonChara.hook();
+      commonChara.guinaifen();
     } else {
       if (rateOff) {
         modulus == 1 ? guarantee.exclusiveChara() : guarantee.standartChara();
