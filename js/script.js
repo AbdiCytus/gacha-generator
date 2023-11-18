@@ -105,12 +105,32 @@ const topaz = {
 
 const huohuo = {
   name: "Huohuo",
-  title: "Coming Soon",
+  title: "Bloom in Gloom",
   banner: bannerChara.huohuo,
   icon: iconChara.huohuo,
   path: path[6],
   element: element.wind,
   character: karakter.huohuo,
+};
+
+const argenti = {
+  name: "Argenti",
+  title: "Coming Soon",
+  banner: bannerChara.argenti,
+  icon: iconChara.argenti,
+  path: path[1],
+  element: element.physical,
+  character: karakter.argenti,
+};
+
+const ruanMei = {
+  name: "Ruan Mei",
+  title: "Coming Soon",
+  banner: bannerChara.ruanMei,
+  icon: iconChara.ruanMei,
+  path: path[5],
+  element: element.ice,
+  character: karakter.ruanMei,
 };
 // Data Detail Karakter
 
@@ -124,6 +144,8 @@ const getChara = [
   jingliu,
   topaz,
   huohuo,
+  argenti,
+  ruanMei,
 ];
 // Data Array Karakter
 
@@ -137,6 +159,8 @@ const icon = [
   jingliu.icon,
   topaz.icon,
   huohuo.icon,
+  argenti.icon,
+  ruanMei.icon,
 ];
 // Icon Karakter
 
@@ -168,7 +192,7 @@ for (let i = 0; i < bannerList.length; i++) {
 function update() {
   for (let i = 0; i < getChara.length; i++) {
     const element = getChara[i];
-    if (element.character == undefined) {
+    if (element.banner == undefined) {
       bannerList[i].style.filter = "saturate(0%)";
       bannerList[i].style.opacity = "50%";
     }
