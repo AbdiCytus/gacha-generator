@@ -115,7 +115,7 @@ const huohuo = {
 
 const argenti = {
   name: "Argenti",
-  title: "Coming Soon",
+  title: "Thorns of Scented Crown",
   banner: bannerChara.argenti,
   icon: iconChara.argenti,
   path: path[1],
@@ -125,12 +125,42 @@ const argenti = {
 
 const ruanMei = {
   name: "Ruan Mei",
-  title: "Coming Soon",
+  title: "Floral Tiptych",
   banner: bannerChara.ruanMei,
   icon: iconChara.ruanMei,
   path: path[5],
   element: element.ice,
   character: karakter.ruanMei,
+};
+
+const drRatio = {
+  name: "Dr. Ratio",
+  title: "Panta Rhei",
+  banner: bannerChara.drRatio,
+  icon: iconChara.drRatio,
+  path: path[0],
+  element: element.imaginary,
+  character: karakter.drRatio,
+};
+
+const blackSwan = {
+  name: "Black Swan",
+  title: "Ripples in Reflection",
+  banner: bannerChara.blackSwan,
+  icon: iconChara.blackSwan,
+  path: path[4],
+  element: element.wind,
+  character: karakter.blackSwan,
+};
+
+const sparkle = {
+  name: "Sparkle",
+  title: "???",
+  banner: bannerChara.sparkle,
+  icon: iconChara.sparkle,
+  path: path[5],
+  element: element.quantum,
+  character: karakter.sparkle,
 };
 // Data Detail Karakter
 
@@ -146,6 +176,9 @@ const getChara = [
   huohuo,
   argenti,
   ruanMei,
+  drRatio,
+  blackSwan,
+  sparkle,
 ];
 // Data Array Karakter
 
@@ -161,6 +194,9 @@ const icon = [
   huohuo.icon,
   argenti.icon,
   ruanMei.icon,
+  drRatio.icon,
+  blackSwan.icon,
+  sparkle.icon,
 ];
 // Icon Karakter
 
