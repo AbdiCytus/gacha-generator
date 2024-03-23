@@ -155,7 +155,7 @@ const blackSwan = {
 
 const sparkle = {
   name: "Sparkle",
-  title: "???",
+  title: "Sparkling Spendor",
   banner: bannerChara.sparkle,
   icon: iconChara.sparkle,
   path: path[5],
