@@ -12,6 +12,8 @@ export const bannerChara = {
   drRatio: "assets/banner/Dr. Ratio.webp",
   blackSwan: "assets/banner/Black Swan.webp",
   sparkle: "assets/banner/Sparkle.webp",
+  acheron: "assets/banner/Acheron.webp",
+  robin: "assets/banner/Robin.webp",
 };
 
 export const iconChara = {
@@ -28,6 +30,8 @@ export const iconChara = {
   drRatio: "assets/icon/characters/Dr. Ratio.webp",
   blackSwan: "assets/icon/characters/Black Swan.webp",
   sparkle: "assets/icon/characters/Sparkle.webp",
+  acheron: "assets/icon/characters/Acheron.webp",
+  robin: "assets/icon/characters/Robin.webp",
 };
 
 export const karakter = {
@@ -44,6 +48,8 @@ export const karakter = {
   drRatio: "assets/characters/Dr. Ratio Splash Art.webp",
   blackSwan: "assets/characters/Black Swan Splash Art.webp", 
   sparkle: "assets/characters/Sparkle Splash Art.webp", 
+  acheron: "assets/characters/Acheron Splash Art.webp", 
+  robin: "assets/characters/Robin Splash Art.webp", 
   clara: "assets/characters/Clara Splash Art.webp",
   bailu: "assets/characters/Bailu Splash Art.webp",
   hook: "assets/characters/Hook Splash Art.webp",

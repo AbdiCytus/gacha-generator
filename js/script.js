@@ -159,8 +159,28 @@ const sparkle = {
   banner: bannerChara.sparkle,
   icon: iconChara.sparkle,
   path: path[5],
-  element: element.quantum,
+  element: element.lightning,
   character: karakter.sparkle,
+};
+
+const acheron = {
+  name: "Acheron",
+  title: "Words of Yore",
+  banner: bannerChara.acheron,
+  icon: iconChara.acheron,
+  path: path[4],
+  element: element.quantum,
+  character: karakter.acheron,
+};
+
+const robin = {
+  name: "Robin",
+  title: "Just Intonation",
+  banner: bannerChara.robin,
+  icon: iconChara.robin,
+  path: path[5],
+  element: element.physical,
+  character: karakter.robin,
 };
 // Data Detail Karakter
 
@@ -179,6 +199,8 @@ const getChara = [
   drRatio,
   blackSwan,
   sparkle,
+  acheron,
+  robin,
 ];
 // Data Array Karakter
 
@@ -197,6 +219,8 @@ const icon = [
   drRatio.icon,
   blackSwan.icon,
   sparkle.icon,
+  acheron.icon,
+  robin.icon,
 ];
 // Icon Karakter
 
